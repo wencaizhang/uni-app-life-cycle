@@ -1,0 +1,1 @@
+<view><view class="_p">demo1</view><button data-event-opts="{{[['tap',[['e0',['$event']]]]]}}" bindtap="__e">显示/隐藏 componentA</button><block wx:if="{{componentAVisible}}"><component-a vue-id="e9d9083c-1" bind:__l="__l"></component-a></block></view>

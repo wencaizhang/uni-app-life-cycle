@@ -1,0 +1,1 @@
+<view class="_div"><view data-ref="title" class="_h1 vue-ref">{{title}}</view><view class="_p">componentA</view></view>

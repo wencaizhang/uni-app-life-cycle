@@ -4,6 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<button @click="fn">reject</button>
 	</view>
 </template>
 
@@ -15,11 +16,31 @@
 			}
 		},
 		onLoad() {
-
+			console.log('onLoad')
+			// throw new Error('onLoad 出错啦')
+			// this.fn()
+		},
+		mounted () {
+			this.fn()
+			// this.emitError()
+		},
+		onTabItemTap (obj) {
+			console.log('onTabItemTap from index')
+			console.log(obj)
 		},
 		methods: {
-
-		}
+			emitError () {
+				return a;
+			},
+			fn () {
+				return new Promise((resolve, reject) => {
+					setTimeout(() => {
+						reject('onUnhandledRejection 测试')
+					}, 2000)
+				})
+			}
+		},
+		
 	}
 </script>
 
